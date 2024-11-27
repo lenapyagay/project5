@@ -4,10 +4,10 @@ def main():
     all_product_names = []
     
     for file in files:
-        product_names = func1(file)
+        product_names = retrieves_goods(file)
         all_product_names.extend(product_names)
     
-    func2(all_product_names)
+    displays_names_in_a_table_format(all_product_names)
 
 # Инициализованный скрипт
 if __name__ == "main":
