@@ -1,3 +1,4 @@
+
 # function модуль для импорта ф-ции для работы
 
 
@@ -20,4 +21,5 @@ def displays_names_in_a_table_format(product_names):
     """"Выводит названия товаров в табличном виде"""
     for i, name in enumerate(product_names, start=1):
         print(f'{i}. {name}')
-    pass
+
+  
