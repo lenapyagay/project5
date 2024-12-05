@@ -1,11 +1,19 @@
-#main стартовый модуль проекта
-# import
+# Основная функция
+from function import displays_names_in_a_table_format, retrieves_goods
 
-from function import func1,func2
+
 def main():
-    #to do вызов из функции
-    pass
+    files = ["reviews1.docx", "reviews2.docx", "reviews3.docx"]
+    all_product_names = []
+    
+    for file in files:
+        product_names = retrieves_goods(file)
+        all_product_names.extend(product_names)
+    
+    displays_names_in_a_table_format(all_product_names)
 
-# инициализованный скрипт
-if __name__ == "_main_":
+
+# Инициализованный скрипт
+if __name__ == "__main__":
     main()
+
