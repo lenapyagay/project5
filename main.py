@@ -1,4 +1,7 @@
 # Основная функция
+from function import displays_names_in_a_table_format, retrieves_goods
+
+
 def main():
     files = ["reviews1.docx", "reviews2.docx", "reviews3.docx"]
     all_product_names = []
@@ -9,7 +12,8 @@ def main():
     
     displays_names_in_a_table_format(all_product_names)
 
+
 # Инициализованный скрипт
-if __name__ == "main":
+if __name__ == "__main__":
     main()
 

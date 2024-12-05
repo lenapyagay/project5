@@ -6,14 +6,18 @@
 from docx import Document
 
 def retrieves_goods(file_path): # функция для извлечения названий товаров из документа
-    """" Функция 1 """
     document = Document(file_path)
     product_names = []
     for paragraph in document.paragraphs:
-        if paragraph.text.strip(): # проверка на наличие текста
-            if len(paragraph.text.split()) < 5: #название короче 5 слов
-                product_names.append(paragraph.text.strip())
+        for run in paragraph.runs:  # Проверка каждого текстового фрагмента
+            if run.font.size and run.font.size.pt == 12:
+                text = run.text.strip()
+                if len(text.split()) <= 6:  # Условие для названия товара
+                    product_names.append(text)
+                
     return product_names
+
+    
 
 
 
